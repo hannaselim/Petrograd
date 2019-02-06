@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Petrograd" content="theme 5 website">
+    <link href="style.css" rel="stylesheet">
+    <title>Petrograd</title>
+    <script src="script.js"></script>
+    <link rel="icon" href="icon/hsvlogo.ico" type="image/x-icon">
+</head>
+<body>
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  <h2>Welcome to</h2>
+  <h1>Petrograd</h1>
+  <p>Your local Italian Cuisine</p>
+</div>
+<template>
+    <article>
+        <h1>NAME</h1>
+        <h2>PRICE</h2>
+        <h3>DESCRIPTION</h3>
+    </article>
+</template>
+
+<script>
+    const template = document.querySelector("template"); //select the template
+    let clone = template.content.cloneNode(true); //make a clone of the template content
+    const main = document.querySelector("main"); //select a container element
+
+    //change content of clone elements
+    clone.querySelector("h1").textContent= "Russian Ringbread";
+    clone.querySelector("h2").textContent = "29,-";
+    clone.querySelector("p").textContent = "New descriptive text...";
+
+    main.appendChild(clone); //append the clone to the container element
+
+    clone= template.content.cloneNode(true); //make a new clone of the template content
+
+    //change content of 2nd clone elements
+    clone.querySelector("h1").textContent= "Caviar bruschetta";
+    clone.querySelector("h2").textContent= "49,-";
+    clone.querySelector("p").textContent= "2nd new descriptive text...";
+
+    main.appendChild(clone); //append the 2nd clone to the container element
+</script>
+</body>
+</html>
+
