@@ -1,42 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Petrograd" content="theme 5 website">
-    <link href="style.css" rel="stylesheet">
     <title>Petrograd</title>
-    <script src="java.js"></script>
-    <link rel="icon" href="icon/hsvlogo.ico" type="image/x-icon">
-</head>
-<body>
-<div class="bg-image">
-<div class="bg-text">
-  <h2>Welcome to</h2>
-  <h1>Petrograd</h1>
-  <p>Home of fresh ingredients</p>
-</div>
-</div>
-<div class="header">
-<template>
-    <article>
-        <h1>NAME</h1>
-        <h2>PRICE</h2>
-        <h3>DESCRIPTION</h3>
-    </article>
-</template>
+    <style>
 
-     <template id="myTemp">
+        img {
+            width: 100%;
+        }
+        main{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            //***grid-template-columns: repeat(4, 1fr);***///
+            grid-gap: 1em;
+        }
+
+        article{
+            padding: 1em;
+            border: 1px solid;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="bg-image">
+    <div class="bg-text">
+      <h2>Welcome to</h2>
+      <h1>Petrograd</h1>
+      <p>Home of fresh ingredients</p>
+    </div>
+</div>
+
+
+    <h1>My site</h1>
+    <main></main>
+
+    <template id="myTemp">
         <article>
             <h1>NAME</h1>
             <h2>PRICE</h2>
-            <img class="img" src="guzni-md.jpg">
+            <img src="IMG">
         </article>
     </template>
 
-</div>
+    <script>
+        const template = document.querySelector("#myTemp").content;
+        const main = document.querySelector("main");
 
+        for(let i = 0; i<10; i++){
+
+
+
+
+
+        let clone = template.cloneNode(true);
+        clone.querySelector("h1").textContent="Name of meal";
+        clone.querySelector("h2").textContent="59,- kr.";
+        clone.querySelector("img").src="guzni-md.jpg";
+
+        main.appendChild(clone);
+}
+    </script>
 
 </body>
-</html>
 
+</html>

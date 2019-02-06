@@ -37,32 +37,3 @@ body, html {
   padding: 20px;
   text-align: center;
 }
-h1 {
-    font-size: 50px;
-}
-/*div padding style*/
-
-.header {
-  background-color: #f1f1f1;
-  padding: 120px;
-  text-align: center;
-}
-
-/* the grid layout style*/
-
- img {
-            width: 100%;
-        }
-        main{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-            //***grid-template-columns: repeat(4, 1fr);***///
-            grid-gap: 1em;
-        }
-
-        article{
-            padding: 1em;
-            border: 1px solid;
-        }
-
-
