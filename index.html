@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petrograd</title>
-    <style>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+        <style>
 
         img {
             width: 100%;
@@ -36,8 +38,6 @@
     </div>
 </div>
 
-
-    <h1>My site</h1>
     <main></main>
 
     <template id="myTemp">
@@ -53,11 +53,6 @@
         const main = document.querySelector("main");
 
         for(let i = 0; i<10; i++){
-
-
-
-
-
         let clone = template.cloneNode(true);
         clone.querySelector("h1").textContent="Name of meal";
         clone.querySelector("h2").textContent="59,- kr.";
